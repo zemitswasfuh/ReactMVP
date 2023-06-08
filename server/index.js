@@ -10,8 +10,8 @@ const app = express();
 
 app.use(express.json());
 
-app.get("/api/tasks", (req, res) => {
-  sql`SELECT * FROM tasks`.then((rows) => {
+app.get("/api/vehicles", (req, res) => {
+  sql`SELECT * FROM vehicles`.then((rows) => {
     res.send(rows);
   });
 });
