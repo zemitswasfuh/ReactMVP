@@ -2,6 +2,7 @@ import express from "express";
 import postgres from "postgres";
 import dotenv from "dotenv";
 
+
 dotenv.config({ path: "../.env" });
 
 const PORT = process.env.PORT;

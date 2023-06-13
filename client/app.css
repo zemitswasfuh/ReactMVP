@@ -21,3 +21,32 @@ body {
 .task > * + * {
   margin-left: 4px;
 }
+
+.vehicle {
+  display: flex;
+  flex-wrap: wrap;
+  border-style: outset;
+  margin-bottom: 8px;
+}
+
+.vicData {
+  font-size: x-large;
+  margin-left: 40px;
+}
+
+.pic {
+  border-style: solid;
+  margin-left: 20px;
+}
+
+.title {
+text-align: center;
+height: 100px;
+vertical-align: middle;
+font-size: 60px;
+display: grid;
+align-items: center;
+margin-top: auto;
+margin-bottom: auto;
+border-bottom: 5px solid yellow;
+}
