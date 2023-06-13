@@ -50,3 +50,32 @@ margin-top: auto;
 margin-bottom: auto;
 border-bottom: 5px solid yellow;
 }
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  width: 400px;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+}
+
+.order {
+  margin-bottom: 10px;
+}

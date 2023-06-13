@@ -18,10 +18,18 @@ app.get("/api/vehicles", (req, res) => {
   });
 });
 
-// ***Get all orders from DB***
-app.get("/api/orders", (req, res) => {
-  sql`SELECT * FROM orders`.then((rows) => {
+// ***Get specific order by name from DB***
+app.get("/api/orders/:name", (req, res) => {
+  const { name } = req.params;
+  if (name.length === 0) {
+    res.sendStatus(404);
+  }
+  sql`SELECT * FROM orders WHERE name = ${name}`.then((rows) => {
+    if (rows.length === 0) {
+      res.sendStatus(404);
+  } else {
     res.send(rows);
+  }
   });
 });
 
@@ -70,3 +78,9 @@ app.delete("/api/orders/:id", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
 });
+// // ***Get all orders from DB***
+// app.get("/api/orders", (req, res) => {
+//   sql`SELECT * FROM orders`.then((rows) => {
+//     res.send(rows);
+//   });
+// });
