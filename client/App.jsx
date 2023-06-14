@@ -77,19 +77,6 @@ const App = () => {
   return (
     <main>
       <h2 className="title">ReactHurtz</h2>
-      {/* inout field to search orders by name */}
-      <form onSubmit={searchOrders}>
-        <input
-          type="text"
-          placeholder="Search by name"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-        />
-        <button type="submit">Search</button>
-      </form>
-      {showModal && (
-      <SearchModal results={searchResults} onClose={() => setShowModal(false)} />
-    )}
       <div>
         {vehicles.map((vehicle) => (
           <Vehicle
@@ -102,6 +89,18 @@ const App = () => {
         ))}
       </div>
       <h2>Orders</h2>
+      <form onSubmit={searchOrders}>
+        <input
+          type="text"
+          placeholder="Search by name"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+        <button type="submit">Search</button>
+      </form>
+      {showModal && (
+      <SearchModal results={searchResults} onClose={() => setShowModal(false)} />
+    )}
       {orders.map((order) => (
         <div className="order" key={order.id}>
           <p>Name: {order.name}</p>
@@ -112,5 +111,4 @@ const App = () => {
     </main>
   );
 };
-
 export default App;

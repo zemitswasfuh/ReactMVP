@@ -9,7 +9,7 @@ const Vehicle = ({ make, model, imagesrc, onRentClick }) => {
         <p>Make: {make}</p>
         <p>Model: {model}</p>
       </div>
-      <button onClick={onRentClick}>Rent</button>
+      <button className='rent' onClick={onRentClick}>Rent</button>
     </div>
   );
 };

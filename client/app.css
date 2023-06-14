@@ -1,54 +1,51 @@
 body {
   margin: 0;
+  font-family: Arial, sans-serif;
 }
 
 .main {
-  padding: 8px;
+  padding: 20px;
 }
 
-.task {
-  display: flex;
-  align-items: center;
-  border: 1px solid black;
-  padding: 2px;
-  max-width: 200px;
-}
-
-.task + .task {
-  margin-top: 4px;
-}
-
-.task > * + * {
-  margin-left: 4px;
+.title {
+  text-align: center;
+  font-size: 36px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* border-bottom: 5px solid rgba(71, 89, 30, 0.531); */
 }
 
 .vehicle {
   display: flex;
   flex-wrap: wrap;
-  border-style: outset;
-  margin-bottom: 8px;
-}
-
-.vicData {
-  font-size: x-large;
-  margin-left: 40px;
-}
-
-.pic {
-  border-style: solid;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-left: 20px;
+  margin-right: 20px;
 }
 
-.title {
-text-align: center;
-height: 100px;
-vertical-align: middle;
-font-size: 60px;
-display: grid;
-align-items: center;
-margin-top: auto;
-margin-bottom: auto;
-border-bottom: 5px solid yellow;
+.vehicle .pic {
+  width: 200px;
+  flex: 0 0 200px;
+}
+
+.vehicle .vicData {
+  flex: 1;
+  padding: 20px;
+}
+
+.vehicle .vicData h3 {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.vehicle .vicData p {
+  margin: 0;
+  font-size: 20px;
 }
 
 .modal {
@@ -69,13 +66,71 @@ border-bottom: 5px solid yellow;
   padding: 20px;
   border-radius: 4px;
   width: 400px;
+  max-width: 90%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .close {
   float: right;
   cursor: pointer;
+  font-size: 20px;
 }
 
 .order {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
   margin-bottom: 10px;
+}
+
+.order p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+/* CSS */
+.rent {
+  margin-top: 50px;
+  margin-right: 30px;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #000;
+  box-sizing: border-box;
+  color: #000;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -.8px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.rent:focus {
+  color: #171e29;
+}
+
+.rent:hover {
+  border-color: #06f;
+  color: #06f;
+  fill: #06f;
+}
+
+.rent:active {
+  border-color: #06f;
+  color: #06f;
+  fill: #06f;
 }
